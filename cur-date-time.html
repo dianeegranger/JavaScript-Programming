@@ -1,0 +1,51 @@
+<!-- 
+  Diane E. Granger
+  DOM Manipulation
+  Make a page in HTML with a button.
+  When the button is clicked, display the
+  current date and time.
+  Filename:  cur-date-time.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CurDateTime</title>
+    <script>
+      function func() {
+        let date = new Date();
+        document.getElementById("cdt").innerText = date;
+      }
+    </script>
+    <style>
+      .mainbtn {
+        width: 250px;
+        height: 80px;
+        padding: 0.6em 2em;
+        border-radius: 8px;
+        color: #ffffff;
+        background-color: rgb(60, 0, 255);
+        font-size: 1.1em;
+        border: 0;
+        cursor: pointer;
+        margin: 1em;
+      }
+
+      .datetime {
+        bottom: 0;
+        margin: 1em;
+        font-size: larger;
+      }
+    </style>
+    <title>CurDateTime</title>
+  </head>
+  <body>
+    <button onclick="func()" class="mainbtn">Current Date and Time</button>
+    <div class="datetime">
+      <h2>Current Date and Time is:</h2>
+      <div id="cdt"></div>
+    </div>
+  </body>
+</html>
